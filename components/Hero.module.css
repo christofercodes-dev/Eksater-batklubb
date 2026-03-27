@@ -114,7 +114,7 @@
 
 .ctaPrimary {
   background-color: #c4a484; /* Din accentfärg */
-  color: #0a121e; /* Mörkblå text på accentfärg */
+  color: #fff; /* Mörkblå text på accentfärg */
   border: 1px solid #c4a484;
 }
 
