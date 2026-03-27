@@ -1,0 +1,244 @@
+/* components/Membership.module.css */
+.wrapper {
+  padding: 50px 0;
+  background-color: #fbfaf8; /* En mycket ljust beige/varmvit ton */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.content {
+  flex: 1;
+}
+
+.preTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #c4a484;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #2c302e;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5d635f;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.membershipCard {
+  flex: 0 0 400px;
+  background: #fff;
+  padding: 60px;
+  border: 1px solid rgba(44, 48, 46, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+  text-align: center;
+  position: relative;
+}
+
+/* En liten dekorativ detalj i hörnet */
+.membershipCard::before {
+  content: '⚓';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.1;
+  font-size: 1.5rem;
+}
+
+.priceTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8c8c8c;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #2c302e;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.period {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #c4a484;
+  font-weight: 600;
+  margin-bottom: 40px;
+  display: block;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  text-align: left;
+}
+
+.benefits li {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #5d635f;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: #c4a484;
+  border-radius: 50%;
+}
+
+.cta {
+  display: block;
+  width: 100%;
+  background-color: #0a121e;
+  color: #fff;
+  padding: 1.2rem;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #c4a484;
+  transform: translateY(-3px);
+}
+
+/* Lägg till detta i din befintliga Membership.module.css */
+
+.eventHighlight {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(196, 164, 132, 0.2);
+  text-align: left;
+}
+
+.eventTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #c4a484;
+  margin-bottom: 12px;
+  display: block;
+  font-weight: 600;
+}
+
+.eventItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #2c302e;
+}
+
+.eventIcon {
+  font-size: 1rem;
+}
+
+/* Vi gör beskrivningen lite mer levande för att sälja in tävlingarna */
+.accentText {
+  color: #c4a484;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Lägg till/ändra i din Membership.module.css */
+
+.guarantee {
+  margin-top: 30px;
+  font-size: 0.75rem;
+  color: #8c8c8c;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.humorBadge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: #c4a484;
+  color: #2c302e;
+  padding: 8px 15px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: rotate(5deg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- MOBILANPASSNING --- */
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    padding: 0 25px;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .content {
+    order: 1; /* TEXTEN FÖRST på mobil */
+  }
+
+  .membershipCard {
+    order: 2; /* KORTET UNDER texten */
+    flex: none;
+    width: 100%;
+    max-width: 500px; /* Så det inte blir gigantiskt på stora mobiler */
+  }
+
+  .benefits {
+    max-width: 320px;
+    margin: 0 auto 40px auto; /* Centrerar listan */
+  }
+
+  .humorBadge {
+    right: 10px;
+    top: -5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .amount {
+    font-size: 3rem;
+  }
+  
+  .container {
+    padding: 0 20px;
+  }
+}

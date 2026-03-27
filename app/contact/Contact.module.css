@@ -1,0 +1,164 @@
+/* Contact.module.css */
+
+.section {
+    padding: clamp(60px, 10vw, 120px) 0;
+    background-color: #ffffff; 
+    color: #243444;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 8vw, 100px);
+    align-items: center;
+}
+
+/* --- Bildsidan --- */
+.imageSide {
+    position: relative;
+    order: 1;
+    width: 100%;
+}
+
+.imageFrame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: #0a121e; 
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.05) brightness(0.9);
+}
+
+.infoBox {
+    margin-top: 30px;
+}
+
+.infoBox h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.infoBox p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* --- Textsidan --- */
+.textSide {
+    order: 2;
+}
+
+.year {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #c4a484; 
+    margin-bottom: 20px;
+    display: block;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #0a121e;
+}
+
+.title i {
+    font-style: italic;
+}
+
+.story p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* --- Kontaktlista --- */
+.contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contactItem {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.label {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #c4a484;
+    margin-bottom: 8px;
+}
+
+.value {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 500;
+    color: #0a121e;
+}
+
+/* --- RESPONSIVITET (Exakt som Fiske/Heritage) --- */
+
+@media (max-width: 850px) {
+    .container {
+        padding: 0 40px; 
+    }
+
+    .contentGrid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .imageSide {
+        order: 1; 
+        width: 100%;
+        max-width: none;
+    }
+
+    .textSide {
+        order: 2;
+        text-align: center;
+    }
+
+    .contactItem {
+        text-align: center;
+    }
+
+    .title, .story p, .year, .infoBox {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+        padding-top:50px;
+    }
+    
+    .title {
+        font-size: 1.8rem !important; 
+    }
+}

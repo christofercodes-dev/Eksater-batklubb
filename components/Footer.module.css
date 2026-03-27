@@ -1,0 +1,218 @@
+.footer {
+  background-color: #0a121e;
+  color: #fff;
+  padding: 80px 0 40px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.brand h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.brand p {
+  opacity: 0.6;
+  font-size: 0.9rem;
+  max-width: 250px;
+}
+
+.links {
+  display: flex;
+  gap: 80px;
+}
+
+.linkGroup h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+  color: #c4a484; /* Accentfärgen igen */
+}
+
+.linkGroup a, .linkGroup span {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  transition: opacity 0.2s;
+}
+
+.linkGroup a:hover {
+  opacity: 1;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  opacity: 0.5;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.coordinates {
+  letter-spacing: 1px;
+}
+
+/* Footer.module.css */
+.footer {
+  background-color: #0a121e; /* Din nya mörkblå bas */
+  color: #fff;
+  padding: clamp(60px, 8vw, 100px) 0 40px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.brand {
+  flex: 1;
+  min-width: 250px;
+}
+
+.brand h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.brand p {
+  opacity: 0.6;
+  font-size: 0.95rem;
+  max-width: 300px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.links {
+  display: flex;
+  gap: clamp(40px, 6vw, 80px);
+  flex-wrap: wrap;
+}
+
+.linkGroup h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  margin-bottom: 25px;
+  color: #c4a484; /* Den sandiga accentfärgen */
+  font-weight: 600;
+}
+
+.linkGroup a, 
+.linkGroup span {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+}
+
+.linkGroup a:hover {
+  opacity: 1;
+  color: #c4a484;
+  transform: translateX(5px); /* En liten knuff åt höger vid hover */
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  opacity: 0.5;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.coordinates {
+  letter-spacing: 1.5px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- RESPONSIVITET --- */
+
+@media (max-width: 768px) {
+  .footer {
+    padding-bottom: 60px; /* Mer plats i botten för mobila tummar */
+  }
+
+  .top {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .brand p {
+    margin: 0 auto;
+  }
+
+  .links {
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+  }
+
+  .linkGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .linkGroup a:hover {
+    transform: none; /* Ta bort translateX på mobil */
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .links {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .container {
+    padding: 0 25px;
+  }
+}

@@ -1,0 +1,175 @@
+/* Fiske.module.css */
+
+.section {
+    padding: clamp(60px, 10vw, 50px) 0;
+    background-color: #ffffff; 
+    color: #243444;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  
+  .contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 8vw, 100px);
+    align-items: center;
+  }
+  
+  .textSide {
+    order: 2; /* Bilden till vänster, text till höger */
+  }
+  
+  .imageSide {
+    position: relative;
+    order: 1;
+  }
+  
+  .year {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #c4a484; 
+    margin-bottom: 20px;
+    display: block;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #0a121e;
+  }
+  
+  .title i {
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .story p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.8;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    color: #243444;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .statItem {
+    flex: 1;
+  }
+  
+  .statValue {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: #0a121e;
+  }
+  
+  .statLabel {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #c4a484;
+  }
+  
+  .imageFrame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: #0a121e; 
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Behåller naturkänslan utan för mycket sepia */
+    filter: contrast(1.05) brightness(0.95);
+    opacity: 0.95;
+    transition: transform 0.5s ease;
+  }
+  
+  .imageFrame:hover .image {
+    transform: scale(1.02);
+  }
+  
+  .imageOverlay {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 80px rgba(0,0,0,0.1);
+    pointer-events: none;
+  }
+  
+  .imageCaption {
+    margin-top: 15px;
+    font-size: 0.7rem;
+    font-style: italic;
+    opacity: 0.6;
+    text-align: left; /* Eftersom bilden nu är till vänster */
+    color: #243444;
+  }
+  
+  /* --- RESPONSIVITET --- */
+
+@media (max-width: 850px) {
+    .container {
+        /* Se till att denna padding är identisk med Heritage-sektionen */
+        padding: 0 40px; 
+    }
+
+    .contentGrid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .imageSide {
+        order: 2; 
+        width: 100%;      /* Tar bort eventuell krympning */
+        max-width: none;  /* VIKTIGT: Tar bort begränsningen så den matchar Heritage */
+        margin: 0;        /* Nollställer margin så den inte centreras med luft på sidorna */
+    }
+
+    .textSide {
+        order: 1;
+        text-align: center;
+    }
+
+    .stats {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .title, .story p, .year, .imageCaption {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px; /* Samma tighta padding som Heritage på små mobiler */
+    }
+    
+    .title {
+        /* Tvingande fix för att rubriken inte ska bli för stor */
+        font-size: 1.8rem !important; 
+    }
+}

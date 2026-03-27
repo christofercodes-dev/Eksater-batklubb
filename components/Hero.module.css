@@ -1,0 +1,248 @@
+/* Hero.module.css */
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Fyller hela skärmen vertikalt */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  text-align: center; /* Centrerar innehåll på små skärmar som standard */
+}
+
+.bgImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bgImage {
+  object-fit: cover;
+  filter: brightness(0.7); /* Mörkar ner bilden lite för bättre textkontrast */
+}
+
+.gradientOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 2;
+}
+
+.contentContainer {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Standard: text till vänster */
+  height: 100%;
+}
+
+.textWrapper {
+  max-width: 800px; /* Begränsar textens bredd */
+  text-align: left; /* Texten är vänsterjusterad som standard */
+}
+
+.preTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #c4a484; /* Din accentfärg */
+  margin-bottom: 20px;
+  opacity: 0; /* För animation */
+}
+
+.mainTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 6rem); /* Större och mer dynamisk rubrik */
+  line-height: 1.05;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0; /* För animation */
+}
+
+.mainTitle i {
+  font-style: italic;
+  font-weight: 400;
+  color: #c4a484; /* Framhäver det kursiva med accentfärg */
+}
+
+.leadText {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin-bottom: 50px;
+  font-weight: 300;
+  opacity: 0; /* För animation */
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 20px;
+  opacity: 0; /* För animation */
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-block;
+  padding: 18px 35px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* Förhindrar radbrytning */
+}
+
+.ctaPrimary {
+  background-color: #c4a484; /* Din accentfärg */
+  color: #0a121e; /* Mörkblå text på accentfärg */
+  border: 1px solid #c4a484;
+}
+
+.ctaPrimary:hover {
+  background-color: #d1b59f;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaSecondary {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.ctaSecondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.watermark {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-family: 'Inter', sans-serif;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0; /* För animation */
+}
+
+.watermarkText {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.watermarkCoords {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+
+/* --- ANIMATIONS --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+.fadeInUpDelay1 { animation: fadeInUp 0.8s ease-out 0.2s forwards; }
+.fadeInUpDelay2 { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
+.fadeInUpDelay3 { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
+.fadeIn { animation: fadeIn 1.5s ease-out 1s forwards; }
+
+
+/* --- RESPONSIVITET --- */
+
+@media (max-width: 900px) {
+  .heroSection {
+    height: 90vh; /* Lite mindre höjd på tablets */
+  }
+  .contentContainer {
+    padding: 0 30px;
+    align-items: center; /* Centrerar texten horisontellt */
+  }
+
+  .textWrapper {
+    text-align: center; /* Centrerar texten inuti wrapper */
+  }
+
+  .buttonGroup {
+    justify-content: center; /* Centrerar knapparna */
+  }
+
+  .watermark {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroSection {
+    height: 85vh; /* Ännu mindre på mobiler */
+  }
+
+  .mainTitle {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    margin-bottom: 25px;
+  }
+
+  .leadText {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 40px;
+  }
+
+  .buttonGroup {
+    flex-direction: column; /* Stapla knappar vertikalt */
+    width: 100%;
+    max-width: 300px; /* Begränsa knapparnas bredd */
+    margin: 0 auto;
+  }
+
+  .ctaPrimary, .ctaSecondary {
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 0.8rem;
+  }
+
+  .watermark {
+    display: none; /* Dölj vattenstämpeln på små mobiler för att spara plats */
+  }
+}

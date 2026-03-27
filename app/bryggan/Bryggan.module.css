@@ -1,0 +1,268 @@
+    /* Bryggan.module.css */
+
+    .wrapper {
+        padding: clamp(100px, 15vw, 180px) 0 100px;
+        background-color: #ffffff;
+        color: #0a121e;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    
+    /* --- Header (Samma stil som About Intro) --- */
+    .header {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    
+    .preTitle {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #c4a484;
+        margin-bottom: 25px;
+        display: block;
+    }
+    
+    .title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        line-height: 1.1;
+        margin-bottom: 30px;
+        font-weight: 400;
+    }
+    
+    .intro {
+        max-width: 700px;
+        margin: 0 auto;
+        font-family: 'Inter', sans-serif;
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
+        line-height: 1.7;
+        color: #4a4a4a;
+        font-weight: 300;
+    }
+    
+    /* --- Grid (Identisk med ValueGrid i About) --- */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+        margin-bottom: 80px;
+    }
+    
+    .card h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        color: #0a121e;
+    }
+    
+    .card p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #5d635f;
+        font-weight: 300;
+    }
+    
+    /* --- Status Box (Unik för Bryggan men i stil med CultureBox) --- */
+    .statusBox {
+        background-color: #fbfaf8; /* Ljusbeige för att bryta av mot det vita */
+        padding: 30px 40px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-left: 4px solid #c4a484; /* Guldlinje för att dra ögat till sig */
+    }
+    
+    .statusDot {
+        width: 12px;
+        height: 12px;
+        background-color: #c4a484; /* Eller röd/grön om du vill vara tydlig */
+        border-radius: 50%;
+        flex-shrink: 0;
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(0.95); opacity: 0.7; }
+        50% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(0.95); opacity: 0.7; }
+    }
+    
+    .statusBox span {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        color: #0a121e;
+    }
+
+.wrapper {
+    /* Justerad padding för att ge plats åt navbaren på mobil */
+    padding: clamp(80px, 12vw, 180px) 0 80px;
+    background-color: #ffffff;
+    color: #0a121e;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* --- Header --- */
+.header {
+    text-align: center;
+    margin-bottom: clamp(40px, 8vw, 80px);
+}
+
+.preTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #c4a484;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    /* Sänkt basvärde till 1.8rem för att inte krocka på mobil */
+    font-size: clamp(1.8rem, 7vw, 4rem);
+    line-height: 1.2;
+    margin: 0 auto 25px;
+    font-weight: 400;
+    max-width: 900px;
+    word-wrap: break-word;
+}
+
+.title i {
+    font-style: italic;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    line-height: 1.7;
+    color: #4a4a4a;
+    font-weight: 300;
+}
+
+/* --- Grid --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #0a121e;
+}
+
+.card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #5d635f;
+    font-weight: 300;
+}
+
+/* --- Status Box --- */
+.statusBox {
+    background-color: #fbfaf8;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-left: 4px solid #c4a484;
+}
+
+.statusDot {
+    width: 12px;
+    height: 12px;
+    background-color: #c4a484;
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+.statusBox span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #0a121e;
+    line-height: 1.5;
+}
+
+/* --- RESPONSIVITET --- */
+
+@media (max-width: 1024px) {
+    .grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .statusBox {
+        flex-direction: row; /* Behåll rad om möjligt, annars column */
+        padding: 25px;
+        border-left: none;
+        border-top: 3px solid #c4a484; /* Flytta linjen till toppen på mobil */
+        justify-content: center;
+    }
+    
+    .header {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        /* TVINGANDE FIX FÖR RUBRIKEN */
+        font-size: 1.8rem !important; 
+        line-height: 1.25 !important;
+        padding: 0 10px;
+    }
+
+    .statusBox {
+        flex-direction: column; /* Stapla helt på de minsta skärmarna */
+        text-align: center;
+        gap: 15px;
+    }
+
+    .preTitle {
+        font-size: 0.65rem;
+        letter-spacing: 3px;
+    }
+
+    .wrapper {
+        padding-top: 20px;
+    }
+}

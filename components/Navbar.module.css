@@ -1,0 +1,143 @@
+.navWrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 25px 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+}
+
+.scrolled {
+  background-color: rgba(10, 18, 30, 0.95);
+  backdrop-filter: blur(3px);
+  padding: 15px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  z-index: 1001; /* Se till att loggan syns över menyn */
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.navLinks a:hover {
+  opacity: 1;
+}
+
+.cta {
+  background-color: #c4a484;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  transition: transform 0.3s;
+}
+
+/* Hamburgare - Dold på desktop */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1001;
+  padding: 10px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px 0;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* --- MOBILANPASSNING --- */
+
+@media (max-width: 850px) {
+  .hamburger {
+    display: block;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  /* Hamburgare Animation till X */
+  .hamburgerActive .bar:nth-child(2) { opacity: 0; }
+  .hamburgerActive .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburgerActive .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .navContent {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Dold utanför skärmen */
+    width: 100%;
+    height: 100vh;
+    background-color: #0a121e;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+  }
+
+  .navActive {
+    right: 0; /* Glid in */
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .navLinks a {
+    font-size: 1.2rem; /* Större länkar på mobilen */
+  }
+
+  .cta {
+    padding: 15px 40px;
+    font-size: 1rem;
+  }
+}

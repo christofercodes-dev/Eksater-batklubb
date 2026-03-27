@@ -1,0 +1,114 @@
+.section {
+  padding: 160px 0;
+  background-color: #fff; /* Samma oatmeal-ton som heron för sömlös övergång */
+  color: #2c302e;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.imageWrapper:hover .mainImage {
+  transform: scale(1.05);
+}
+
+.imageCaption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #ffffff;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.preTitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #c4a484; /* Guld/Trä-tonen */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a4f4c;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 40px;
+}
+
+.gridItem h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.gridItem p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #5d635f;
+  font-weight: 300;
+}
+
+/* Responsivitet för mobila enheter */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 0 30px;
+    gap: 60px;
+  }
+  
+  .section {
+    padding: 100px 0;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+}

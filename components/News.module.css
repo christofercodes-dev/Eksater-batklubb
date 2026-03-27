@@ -1,0 +1,214 @@
+.wrapper {
+  padding: 50px 0;
+  background-color: #fff; /* Fortsatt samma lugna bas */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 80px;
+}
+
+.preTitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #c4a484;
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin: 0;
+  color: #2c302e;
+  
+}
+
+.viewAll {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #2c302e;
+  padding: 5px 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  color: #2c302e;
+  transition: opacity 0.3s;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.viewAll:hover {
+  opacity: 0.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  border-top: 1px solid rgba(44, 48, 46, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.date {
+  color: #8c8c8c;
+}
+
+.tag {
+  color: #c4a484;
+  font-weight: 600;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #2c302e;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.excerpt {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #5d635f;
+  margin-bottom: 25px;
+  font-weight: 300;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.readMore {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2c302e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: auto;
+  font-family: 'Inter', sans-serif;
+
+}
+ 
+/* Markera event-kort med en subtil bakgrundston eller ram */
+.eventCard {
+  background-color: #fbfaf8; /* Samma varma ton som i medlemskap */
+  padding: 30px;
+  margin-top: 0; /* Justera om paddingen ändras */
+  border-top: 1px solid #c4a484 !important; /* Guldlinje för event */
+}
+
+.contestTag {
+  color: #fff;
+  background-color: #c4a484;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.eventLabel {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #c4a484;
+  margin-top: auto;
+  padding-top: 20px;
+  font-weight: 600;
+}
+
+.footerNote {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #8c8c8c;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- RESPONSIVITET --- */
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Två kolumner på tablets */
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center; /* Centrerat på mobil för bättre balans */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* En kolumn på mobilen */
+    gap: 50px;
+  }
+
+  .container {
+    padding: 0 25px;
+  }
+
+  .card {
+    text-align: center;
+    align-items: center;
+  }
+
+  .meta {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .eventCard {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .footerNote {
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+}

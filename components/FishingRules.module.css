@@ -1,0 +1,186 @@
+.section {
+  padding: 150px 20px;
+  background-color: #010214;
+  color: #fdfcf8;
+  position: relative;
+  overflow: hidden; /* Viktigt för att dölja overflow från rotation */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlayText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none; /* Blockera inte interaktion */
+  z-index: 10;
+}
+
+.quote {
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: rgba(253, 252, 248, 0.1); /* Nästan genomskinlig */
+  text-shadow: 0 0 10px rgba(0, 113, 227, 0.05);
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 20; /* Över bakgrundstexten */
+}
+
+.header {
+  margin-bottom: 80px;
+}
+
+.subtitle {
+  color: #0071e3;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block; /* För att den ska få egen rad */
+  margin-bottom: 15px;
+}
+
+.title {
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1.1;
+}
+
+.title span {
+  color: rgba(253, 252, 248, 0.4);
+}
+
+.compassContainer {
+  position: relative;
+  width: clamp(280px, 70vw, 700px);
+  height: clamp(280px, 70vw, 700px);
+  border: 1px solid rgba(0, 113, 227, 0.3);
+  border-radius: 50%;
+  margin: 80px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 50px rgba(0, 113, 227, 0.1);
+}
+
+.centerDot {
+  width: 20px;
+  height: 20px;
+  background-color: #0071e3;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 30;
+  box-shadow: 0 0 15px rgba(0, 113, 227, 0.8);
+}
+
+.serviceRingItem {
+  position: absolute;
+  /* Placera dem runt cirkeln med transform */
+  width: 180px; /* Bredd på varje service-box */
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 113, 227, 0.05);
+  transform-origin: center center;
+  user-select: none;
+}
+
+.serviceRingItem:hover {
+  background: rgba(0, 113, 227, 0.1);
+  border-color: rgba(0, 113, 227, 0.5);
+  transform: scale(1.05);
+}
+
+/* Positionering för varje service-item */
+.serviceRingItem:nth-child(2) { /* Hamnplatser */
+  top: -40px; 
+  left: 50%;
+  transform: translateX(-50%) translateY(0%);
+}
+.serviceRingItem:nth-child(3) { /* Klubbaktiviteter */
+  top: 50%;
+  right: -90px;
+  transform: translateY(-50%) translateX(0%);
+}
+.serviceRingItem:nth-child(4) { /* Medlemsförmåner */
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0%);
+}
+
+
+.serviceValue {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fdfcf8;
+  line-height: 1;
+}
+.serviceUnit {
+  font-size: 14px;
+  color: rgba(253, 252, 248, 0.6);
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+.serviceLabel {
+  font-size: 14px;
+  color: #0071e3;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.compassNeedle {
+  position: absolute;
+  width: 2px;
+  height: 80%;
+  background: linear-gradient(to bottom, #0071e3, #fdfcf8); /* Blå/vit nål */
+  transform-origin: bottom center;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg); /* Exempel rotation, kan animeras */
+  transition: transform 5s ease-in-out; /* Långsam animation */
+  z-index: 25;
+}
+
+.cta {
+  margin-top: 100px;
+}
+
+.ctaButton {
+  background: #0071e3;
+  color: #010214;
+  padding: 18px 35px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #008aff;
+  transform: translateY(-5px);
+}

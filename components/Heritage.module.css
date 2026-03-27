@@ -1,0 +1,297 @@
+.section {
+    padding: 50px 0;
+    background-color: #fff;
+    color: #f4f1ea;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  
+  .contentGrid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 100px;
+    align-items: center;
+  }
+  
+  .year {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #c4a484; /* Guld/trä-ton */
+    margin-bottom: 20px;
+    display: block;
+    font-family: 'Inter', sans-serif;
+
+  }
+  
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    color: #243444;
+  }
+  
+  .title i {
+    font-weight: 400;
+  }
+  
+  .story p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-bottom: 25px;
+    color: #243444;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(244, 241, 234, 0.1);
+  }
+  
+  .statValue {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #243444;
+  }
+  
+  .statLabel {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #c4a484;
+  }
+  
+  .imageSide {
+    position: relative;
+    order: 1;
+  }
+  
+  .imageFrame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: #243444; /* Deep Baltic Blue som bas */
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ger bilden en antik känsla */
+    filter: sepia(20%) contrast(1.1) brightness(0.9);
+    opacity: 0.8;
+  }
+  
+  .imageOverlay {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+  }
+  
+  .imageCaption {
+    margin-top: 20px;
+    font-size: 0.75rem;
+    font-style: italic;
+    opacity: 0.5;
+    text-align: right;
+    color: #243444;
+  }
+  
+  /* Heritage.module.css */
+  .section {
+    padding: clamp(60px, 10vw, 120px) 0; /* Dynamisk padding beroende på skärm */
+    background-color: #ffffff; 
+    color: #243444;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px; /* Något mindre på sidorna för att ge plats */
+  }
+  
+  .contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 8vw, 100px);
+    align-items: center;
+  }
+  
+  .textSide {
+    order: 1; /* Standardordning */
+  }
+  
+  .imageSide {
+    position: relative;
+    order: 2;
+  }
+  
+  .year {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #c4a484; /* Guld/trä-ton */
+    margin-bottom: 20px;
+    display: block;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #0a121e; /* Din nya mörkblå */
+  }
+  
+  .title i {
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .story p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.8;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    color: #243444;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .statItem {
+    flex: 1;
+  }
+  
+  .statValue {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: #0a121e;
+  }
+  
+  .statLabel {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #c4a484;
+  }
+  
+  .imageFrame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5; /* Något högre bild för mer dramatik */
+    background-color: #0a121e; 
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.05); /* Mjuk skugga bakom bilden */
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(15%) contrast(1.05) brightness(0.95);
+    opacity: 0.9;
+    transition: transform 0.5s ease;
+  }
+  
+  .imageFrame:hover .image {
+    transform: scale(1.02); /* Subtil zoom när man hovrar */
+  }
+  
+  .imageOverlay {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 80px rgba(0,0,0,0.2);
+    pointer-events: none;
+  }
+  
+  .imageCaption {
+    margin-top: 15px;
+    font-size: 0.7rem;
+    font-style: italic;
+    opacity: 0.6;
+    text-align: right;
+    color: #243444;
+  }
+  
+  /* --- RESPONSIVITET --- */
+  
+  @media (max-width: 1024px) {
+    .container { padding: 0 30px; }
+    .contentGrid { gap: 50px; }
+  }
+  
+  @media (max-width: 850px) {
+    .contentGrid {
+      grid-template-columns: 1fr; /* Stapla bild och text */
+      gap: 60px;
+    }
+  
+    .textSide {
+      order: 1; /* Texten hamnar under bilden på mobil för bättre flöde */
+    }
+  
+    .imageSide {
+      order: 2;
+      max-width: 500px;
+      margin: 0 auto; /* Centrera bilden på mobilen */
+    }
+  
+    .stats {
+      gap: 20px;
+      justify-content: space-between;
+    }
+  
+    .title {
+      text-align: center;
+    }
+  
+    .story p {
+      text-align: center;
+    }
+    
+    .year {
+      text-align: center;
+    }
+  
+    .imageCaption {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container { padding: 0 20px; }
+    .stats {
+      flex-wrap: wrap; /* Om det blir för trångt för siffrorna */
+      justify-content: center;
+      text-align: center;
+    }
+    .statItem {
+      min-width: 120px;
+    }
+  }
