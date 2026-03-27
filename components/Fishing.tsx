@@ -22,19 +22,17 @@ const Fishing: React.FC = () => {
           </div>
 
           <div className={styles.textSide}>
-            <span className={styles.year}>Sportfiske</span>
+            <span className={styles.year}>Fisket</span>
             <h2 className={styles.title}>Jakten på det <br /><i>stora hugget</i></h2>
             
             <div className={styles.story}>
               <p>
-                Osbysjön är vida känd för sitt rika bestånd av gädda och abborre. För våra medlemmar 
-                är båtplatsen mer än bara en förtöjning – det är startpunkten för morgonpasset 
-                när vattnet ligger spegelblankt och rovfisken vakar i vassen.
+              För många av oss i klubben är Osbysjön främst en övning i extremt tålamod. Sjön har ett fint bestånd av karp, men det är en fisk som tycks ha läst betydligt fler böcker om strategi än vad vi har. Oftast handlar det om att sitta i de lugna vikarna 
+              kring Eksäter och titta på en yta som är så spegelblank att man nästan får dåligt samvete av att kasta ut.
               </p>
               <p>
-                I vårt båthus finns utrymme för förvaring av redskap, vilket gör steget från 
-                beslut till första kastet föredömligt kort. Vi värnar om ett hållbart fiske där 
-                respekten för sjöns ekosystem går hand i hand med glädjen över en god fångst.
+              Här jagar vi inte medaljer, utan snarare den där specifika ron som infinner sig när kaffet är varmt men nappet lyser med sin frånvaro. I vårt båthus kan du stuva undan spöna så att steget ner till bryggan blir smidigt när andan faller på. Vi värnar om en levande sjömiljö där vi ödmjukt accepterar att fisken oftast vinner – 
+              och att de största fångsterna märkligt nog alltid är de som lyckas skaka sig loss precis vid båtkanten
               </p>
             </div>
 

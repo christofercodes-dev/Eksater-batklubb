@@ -27,15 +27,15 @@ const Heritage: React.FC = () => {
             
             <div className={styles.story}>
               <p>
-                Långt innan fritidsbåtarna fyllde våra vikar, var Osbysjön en livsåder för Göingebygdens industri. 
-                Fram till 1950-talet arbetade ångbåtar med att dra tunga pråmar lastade med 
-                "det vita guldet" – kiselgur – från sjöbotten till fabrikerna på land.
+              Där björkarna möter vattnet vid Eksäter har historierna avlöst varandra i decennier. Förr var detta en plats för fest och rörelse; här låg en populär dansbana där musiken ekade över sjön och sommarkvällarna aldrig ville ta slut. Stegen på dansgolvet har tystnat, men glädjen över att vara vid vattnet lever kvar i allra högsta grad.
+
+Idag är det snarare lugnet och spänningen under ytan som lockar. Osbysjön har gjort sig känd för ett fantastiskt karpfiske, där tålamod belönas med både storlek och kampvilja. Eksäters Båtklubb är stolta förvaltare av denna pärla, med 30 båtplatser som fungerar som porten ut till både äventyret och stillheten.
               </p>
               <p>
-                Eksäters Båtklubb bär stoltheten från denna tid vidare. Vi är mer än bara 30 båtplatser; 
-                vi är förvaltare av en plats där människa och vatten mötts i generationer. Från dåtidens 
-                tunga industrislit till dagens jakt på stillheten, den perfekta fångsten och den 
-                minst lika viktiga kaffetåren på bryggkanten.
+              Vi är en ideell förening som förstår att livet är bäst i en eka. Här prioriterar vi gemenskapen högre än dyra
+               instrument – hos oss bygger vi klubbkänslan på en orubblig 
+              optimism om morgondagens väder och en delad förståelse för att 
+              en knop ibland är svårare att slå än man minns.
               </p>
             </div>
 
