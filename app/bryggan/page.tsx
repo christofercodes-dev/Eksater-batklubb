@@ -9,7 +9,7 @@ const Bryggan: React.FC = () => {
 
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.preTitle}>Hamn & Förvaring</span>
+          <span className={styles.preTitle}>Brygga & Förvaring</span>
           <h2 className={styles.title}>En samlingspunkt med <br /><i>praktiska möjligheter.</i></h2>
           <p className={styles.intro}>
             Eksäters Båtklubb är en lokalt förankrad förening. Vi erbjuder en välskött brygga 
@@ -33,7 +33,7 @@ const Bryggan: React.FC = () => {
             <p>
               För medlemmar finns möjlighet till förvaring av mindre tillbehör och utrustning i 
               anslutning till båthuset. Detta förenklar logistiken inför turen på sjön och 
-              skapar en mer lättillgänglig hamnmiljö.
+              skapar en mer lättillgänglig brygga.
             </p>
           </div>
 

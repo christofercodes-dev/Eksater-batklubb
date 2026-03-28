@@ -59,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ forceSolid = false }) => {
               <Link href="/about" onClick={closeMenu}>Föreningen</Link>
             </li>
             <li>
-              <Link href="/bryggan" onClick={closeMenu}>Hamnen</Link>
+              <Link href="/bryggan" onClick={closeMenu}>Bryggan</Link>
             </li>
             <li>
               <Link href="/#membership" onClick={closeMenu}>Medlemskap</Link>
