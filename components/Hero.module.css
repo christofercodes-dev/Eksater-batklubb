@@ -190,7 +190,7 @@
 
 @media (max-width: 900px) {
   .heroSection {
-    height: 90vh; /* Lite mindre höjd på tablets */
+    height: 100vh; /* Lite mindre höjd på tablets */
   }
   .contentContainer {
     padding: 0 30px;
@@ -202,7 +202,8 @@
   }
 
   .buttonGroup {
-    justify-content: center; /* Centrerar knapparna */
+    justify-content: center;
+    margin-top: 50px;
   }
 
   .watermark {
@@ -216,7 +217,7 @@
 
 @media (max-width: 600px) {
   .heroSection {
-    height: 85vh; /* Ännu mindre på mobiler */
+    height: 100vh; /* Ännu mindre på mobiler */
   }
 
   .mainTitle {
@@ -234,6 +235,7 @@
     width: 100%;
     max-width: 300px; /* Begränsa knapparnas bredd */
     margin: 0 auto;
+    margin-top: 50px;
   }
 
   .ctaPrimary, .ctaSecondary {
