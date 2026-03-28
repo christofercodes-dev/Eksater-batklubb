@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           </p>
           <div className={`${styles.buttonGroup} ${isMounted ? styles.fadeInUpDelay3 : ''}`}>
             <a href="#membership" className={styles.ctaPrimary}>Bli medlem</a>
-            <a href="/bryggan" className={styles.ctaSecondary}>Utforska hamnen</a>
+            <a href="/bryggan" className={styles.ctaSecondary}>Utforska bryggan</a>
           </div>
         </div>
 

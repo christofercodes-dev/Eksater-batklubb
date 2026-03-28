@@ -8,15 +8,15 @@ const Footer: React.FC = () => {
         <div className={styles.top}>
           <div className={styles.brand}>
             <h3>Eksäters Båtklubb</h3>
-            <p>Sedan kiselgurpråmarnas tid vid Osbysjön.</p>
+            {/* <p>Sedan kiselgurpråmarnas tid vid Osbysjön.</p> */}
           </div>
           
           <div className={styles.links}>
             <div className={styles.linkGroup}>
               <h4>Navigering</h4>
-              <a href="#bryggan">Bryggan</a>
-              <a href="#om-oss">Om klubben</a>
-              <a href="#medlem">Bli medlem</a>
+              <a href="/about">Föreningen</a>
+              <a href="/bryggan">Bryggan</a>
+              <a href="/#membership">Medlemskap</a>
             </div>
             <div className={styles.linkGroup}>
               <h4>Kontakt</h4>
